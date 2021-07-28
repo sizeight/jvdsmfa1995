@@ -1,0 +1,73 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>&quot;An Electronic Laager&quot;</title>
+		<script language="JavaScript"><!--
+/* Copyright (C)1996 Web Integration Systems, Inc. DBA Websys, Inc.
+
+        All Rights Reserved.
+        This applet can be re-used or modified, if credit is given in the source code.
+
+        */
+
+function scrollit_r2l(seed)
+{
+        var m0  = " System is activated !..........................................................................System is activated ! ";
+        var m1  = " ..........................................................................System is activated ! ";
+        var m2  = " ..........................................................................System is activated ! ";
+        var m3  = " ..........................................................................System is activated ! ";
+        var msg=m0+m1+m2+m3;
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) 
+        {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) 
+        {
+                for (c=0 ; c < seed ; c++) 
+                {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) 
+        {
+                if (-seed < msg.length)
+                 {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="scrollit_r2l(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else 
+                {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+        }
+}
+// -->
+		</script>
+	</head>
+
+	<body bgcolor="#007700" text="#009900" link="#ff5500" alink="#ff5500" vlink="#ff5500" onload="timerONE=window.setTimeout('scrollit_r2l(100)',500);">
+		<center>
+			<blink>disable</blink><a href="anelectroniclaager.html"><blink>/ proceed</blink></a>
+			<p><a href="anelectroniclaager.html" title="Nuclear Button"><img src="fotos/manuc12.gif" border="0" alt="Nuclear Button"></a></p>
+		</center>
+		<center>
+			<p><blink>disable</blink><a href="anelectroniclaager.html"><blink>/ proceed</blink></a></center>
+	</body>
+
+</html>
